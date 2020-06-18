@@ -1,5 +1,7 @@
-Role Name
-=========
+Jython ansible role
+===================
+
+![CI](https://github.com/baztian/ansible-jython/workflows/CI/badge.svg)
 
 Role to download and install Jython. Virtualenv is being preinstalled
 and a link to a virtualenv executable will be created under the name
@@ -35,10 +37,8 @@ jython_download_dir: "{{ x_ansible_download_dir | default(ansible_env.HOME + '~/
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with
-variables passed in as parameters) is always nice for users too:
-
     - hosts: servers
+      become: yes
       roles:
          - { role: baztian.jython, jython_version: "2.7.0" }
 
